@@ -88,13 +88,8 @@ CREATE TABLE LUGAR_VACUNACION(
 CREATE TABLE EFECTO_SECUNDARIO(
 	id_efecto_secundario int primary key not null,
 	id_primera_cita int,
-	tiempo int
-);
-
-CREATE TABLE TIPO_EFECTO_SECUNDARIO(
-	id_tipo_efecto int primary key not null,
-	id_efecto_secundario int,
-	efecto_secundario varchar(50)
+	tiempo int,
+	efecto_secundario varchar (100)
 );
 
 CREATE TABLE SEGUNDA_CITA(
@@ -159,11 +154,7 @@ FOREIGN KEY (id_lugar_vacunacion) REFERENCES LUGAR_VACUNACION (id_lugar_vacunaci
 
 ALTER TABLE EFECTO_SECUNDARIO
 ADD CONSTRAINT FK_EFECTO_SECUNDARIO_PRIMERA_CITA
-FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);
-
-ALTER TABLE TIPO_EFECTO_SECUNDARIO
-ADD CONSTRAINT FK_TIPO_EFECTO_SECUNDARIO_EFECTO_SECUNDARIO
-FOREIGN KEY (id_efecto_secundario) REFERENCES EFECTO_SECUNDARIO (id_efecto_secundario);
+FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);}
 
 ALTER TABLE SEGUNDA_CITA
 ADD CONSTRAINT FK_SEGUNDA_CITA_LUGAR_VACUNACION_2
