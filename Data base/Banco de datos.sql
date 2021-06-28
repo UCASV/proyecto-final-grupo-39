@@ -64,6 +64,7 @@ CREATE TABLE CIUDADANO(
 	nombre varchar(50),
 	correo_electronico varchar(50),
 	telefono varchar(50),
+	prioridad varchar(2),
 	id_area_espera int,
 	id_primera_cita int
 );
