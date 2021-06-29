@@ -52,3 +52,8 @@ C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\
 C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\ref\Part_A.dll
 C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.pdb
 C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.genruntimeconfig.cache
+C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.View.frmLogin.resources
+C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.csproj.GenerateResource.cache
+C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.View.frmFunctions.resources
+C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.View.frmShowEmployes.resources
+C:\Users\ariel\Documents\Universidad\CICLO 01-2021\PROYECTO BD - POO\Part_A\obj\Debug\net5.0-windows\Part_A.View.frmShowCabin.resources
