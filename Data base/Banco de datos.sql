@@ -59,10 +59,10 @@ CREATE TABLE CIUDADANO(
 	nombre varchar(50),
 	correo_electronico varchar(50),
 	telefono varchar(50),
+	id_primera_cita int,
+	enfermedades_cronicas varchar (500),
 	prioridad varchar(2),
-	fecha_hora_area_espera datetime,
-	efermedades_cronicas varchar (500),
-	id_primera_cita int
+	fecha_hora_area_espera datetime
 );
 
 CREATE TABLE PRIMERA_CITA(
@@ -80,15 +80,20 @@ CREATE TABLE LUGAR_VACUNACION(
 CREATE TABLE EFECTO_SECUNDARIO(
 	id_efecto_secundario int IDENTITY(1,1) primary key not null,
 	id_primera_cita int,
-	tiempo int,
-	efecto_secundario varchar (100)
+	efecto_secundario varchar(100),
+	tiempo int
 );
 
 CREATE TABLE SEGUNDA_CITA(
 	id_segunda_cita int IDENTITY(1,1) primary key not null,
 	fecha_hora datetime,
-	id_lugar_vacunacion int,
+	id_lugar_vacunacion_2 int,
 	id_primera_cita int
+);
+
+CREATE TABLE LUGAR_VACUNACION_2(
+	id_lugar_vacunacion_2 int primary key not null,
+	lugar_vacunacion_2 varchar(50)
 );
 
 ALTER TABLE REGISTRO
@@ -131,13 +136,17 @@ ALTER TABLE PRIMERA_CITA
 ADD CONSTRAINT FK_PRIMERA_CITA_LUGAR_VACUNACION
 FOREIGN KEY (id_lugar_vacunacion) REFERENCES LUGAR_VACUNACION (id_lugar_vacunacion);
 
+ALTER TABLE PRIMERA_CITA
+ADD CONSTRAINT FK_PRIMERA_CITA_SEGUNDA_CITA
+FOREIGN KEY (id_segunda_cita) REFERENCES SEGUNDA_CITA (id_segunda_cita);
+
 ALTER TABLE EFECTO_SECUNDARIO
 ADD CONSTRAINT FK_EFECTO_SECUNDARIO_PRIMERA_CITA
 FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);
 
 ALTER TABLE SEGUNDA_CITA
-ADD CONSTRAINT FK_SEGUNDA_CITA_LUGAR_VACUNACION
-FOREIGN KEY (id_lugar_vacunacion) REFERENCES LUGAR_VACUNACION (id_lugar_vacunacion);
+ADD CONSTRAINT FK_SEGUNDA_CITA_LUGAR_VACUNACION_2
+FOREIGN KEY (id_lugar_vacunacion_2) REFERENCES LUGAR_VACUNACION_2 (id_lugar_vacunacion_2);
 
 ALTER TABLE SEGUNDA_CITA
 ADD CONSTRAINT FK_SEGUNDA_CITA_PRIMERA_CITA
@@ -171,6 +180,12 @@ INSERT INTO LUGAR_VACUNACION VALUES (024, 'colonia medica');
 INSERT INTO LUGAR_VACUNACION VALUES (025, 'los proceres');
 INSERT INTO LUGAR_VACUNACION VALUES (026, 'colonia satelite');
 INSERT INTO LUGAR_VACUNACION VALUES (027, 'centro de san salvador');
+
+INSERT INTO LUGAR_VACUNACION_2 VALUES (023, 'los heroes');
+INSERT INTO LUGAR_VACUNACION_2 VALUES (024, 'colonia medica');
+INSERT INTO LUGAR_VACUNACION_2 VALUES (025, 'los proceres');
+INSERT INTO LUGAR_VACUNACION_2 VALUES (026, 'colonia satelite');
+INSERT INTO LUGAR_VACUNACION_2 VALUES (027, 'centro de san salvador');
 
 
 
