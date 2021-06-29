@@ -145,7 +145,7 @@ FOREIGN KEY (id_lugar_vacunacion) REFERENCES LUGAR_VACUNACION (id_lugar_vacunaci
 
 ALTER TABLE EFECTO_SECUNDARIO
 ADD CONSTRAINT FK_EFECTO_SECUNDARIO_PRIMERA_CITA
-FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);}
+FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);
 
 ALTER TABLE SEGUNDA_CITA
 ADD CONSTRAINT FK_SEGUNDA_CITA_LUGAR_VACUNACION_2
@@ -155,13 +155,6 @@ ALTER TABLE SEGUNDA_CITA
 ADD CONSTRAINT FK_SEGUNDA_CITA_PRIMERA_CITA
 FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);
 
-
-
-INSERT INTO CABINA_DIRECCION VALUES (001,'colonia medica');
-INSERT INTO CABINA_DIRECCION VALUES (002,'colonia miralvalle');
-INSERT INTO CABINA_DIRECCION VALUES (003,'colonia escalon');
-INSERT INTO CABINA_DIRECCION VALUES (004,'colonia monserrat');
-INSERT INTO CABINA_DIRECCION VALUES (005,'colonia jerusalen');
 
 INSERT INTO GESTOR VALUES (005, 'Carlos', 'carlos@gmail.com', 'colonia centroamerica', 'carlos22', 'arribabocajuniors');
 INSERT INTO GESTOR VALUES (006, 'Juan', 'juan@gmail.com', 'colonia escalon', 'juanC', 'syntaxerror');
