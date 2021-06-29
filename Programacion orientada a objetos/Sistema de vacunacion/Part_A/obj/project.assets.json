@@ -5817,11 +5817,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Part_A\\Part_A.csproj",
+      "projectUniqueName": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Programacion orientada a objetos\\Sistema de vacunacion\\Part_A\\Part_A.csproj",
       "projectName": "Part_A",
-      "projectPath": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Part_A\\Part_A.csproj",
+      "projectPath": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Programacion orientada a objetos\\Sistema de vacunacion\\Part_A\\Part_A.csproj",
       "packagesPath": "C:\\Users\\ariel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Part_A\\obj\\",
+      "outputPath": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Programacion orientada a objetos\\Sistema de vacunacion\\Part_A\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ariel\\AppData\\Roaming\\NuGet\\NuGet.Config"

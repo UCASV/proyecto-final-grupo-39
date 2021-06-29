@@ -8,7 +8,7 @@ namespace Part_A.Functions
 {
     public class Command
     {
-        public string cnn = "Server=LAPTOP-HF5FGEQ6;Database=BancoDatos;Trusted_Connection=True;";
+        public string cnn = "Server=SQLEXPRESS;Database=BancoDatos;Trusted_Connection=True;";
         public SqlConnection connection;
         private object id = 0;
         public Command()

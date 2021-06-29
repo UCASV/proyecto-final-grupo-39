@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ES3CjXs9G0HRgCARXmtwUhdnJddhq7tEUQj5+iu6NtTT3/zceJeCsHlLFkQRbKW4RIrMBk4M1WgTvFGlKjftHw==",
+  "dgSpecHash": "N9BOp3cxZKdylm3T4RasKinNkrlqzdi+8PhtfjlegdU0YyF1DQ+oi97KQb4LjmftaVjuc/LEFO5mo4y2uUJy+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Part_A\\Part_A.csproj",
+  "projectFilePath": "C:\\Users\\ariel\\Desktop\\New folder\\proyecto-final-grupo-39\\Programacion orientada a objetos\\Sistema de vacunacion\\Part_A\\Part_A.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ariel\\.nuget\\packages\\bouncycastle\\1.8.6.1\\bouncycastle.1.8.6.1.nupkg.sha512",
     "C:\\Users\\ariel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
