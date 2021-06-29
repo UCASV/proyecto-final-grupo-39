@@ -5,13 +5,8 @@ Use BancoDatos
 CREATE TABLE REGISTRO(
 	id_registro int primary key not null,
 	id_gestor int,
-	id_cabina_direccion int,
+	cabina varchar (50),
 	fecha_hora datetime
-);
-
-CREATE TABLE CABINA_DIRECCION(
-	id_cabina_direccion int primary key not null,
-	cabina varchar(50)
 );
 
 CREATE TABLE GESTOR(
@@ -107,10 +102,6 @@ CREATE TABLE LUGAR_VACUNACION_2(
 ALTER TABLE REGISTRO
 ADD CONSTRAINT FK_REGISTRO_GESTOR
 FOREIGN KEY (id_gestor) REFERENCES GESTOR (id_gestor);
-
-ALTER TABLE REGISTRO
-ADD CONSTRAINT FK_REGISTRO_CABINA_DIRECCION
-FOREIGN KEY (id_cabina_direccion) REFERENCES CABINA_DIRECCION (id_cabina_direccion);
 
 ALTER TABLE TRABAJA
 ADD CONSTRAINT FK_TRABAJA_GESTOR
