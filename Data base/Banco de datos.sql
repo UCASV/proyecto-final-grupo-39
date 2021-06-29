@@ -3,7 +3,7 @@ CREATE DATABASE BancoDatos;
 Use BancoDatos
 
 CREATE TABLE REGISTRO(
-	id_registro int primary key not null,
+	id_registro int identity (1,1) primary key not null,
 	id_gestor int,
 	cabina varchar (50),
 	fecha_hora datetime
@@ -15,13 +15,13 @@ CREATE TABLE GESTOR(
 	correo_institucional varchar(50),
 	direccion_vivienda varchar(50),
 	usuario varchar(50),
-	contraseña varchar(50),
+	contraseña varchar(50)
 );
 
 CREATE TABLE TRABAJA(
 	id_trabaja int primary key not null,
 	id_gestor int,
-	id_empleado int,
+	id_empleado int
 );
 
 CREATE TABLE EMPLEADO(
@@ -38,7 +38,7 @@ CREATE TABLE TIPO_EMPLEADO(
 );
 
 CREATE TABLE GESTION(
-	id_gestion int primary key not null,
+	id_gestion int IDENTITY(1,1) primary key not null,
 	id_gestor int,
 	id_empleado int,
 	id_cabina int
@@ -53,26 +53,23 @@ CREATE TABLE CABINA(
 );
 
 CREATE TABLE CIUDADANO(
-	dui_ciudadano int primary key not null,
-	id_cabina int,
+	dui_ciudadano varchar(10) primary key not null,
+	id_gestor int,
 	domicilio varchar(50),
 	nombre varchar(50),
 	correo_electronico varchar(50),
 	telefono varchar(50),
 	prioridad varchar(2),
-	id_area_espera int,
+	fecha_hora_area_espera datetime,
+	efermedades_cronicas varchar (500),
 	id_primera_cita int
 );
 
-CREATE TABLE AREA_ESPERA(
-	id_area_espera int primary key not null,
-	fecha_hora datetime
-);
-
 CREATE TABLE PRIMERA_CITA(
-	id_primera_cita int primary key not null,
+	id_primera_cita int IDENTITY(1,1) primary key not null,
 	fecha_hora datetime,
-	id_lugar_vacunacion int
+	id_lugar_vacunacion int,
+	id_segunda_cita int
 );
 
 CREATE TABLE LUGAR_VACUNACION(
@@ -81,22 +78,17 @@ CREATE TABLE LUGAR_VACUNACION(
 );
 
 CREATE TABLE EFECTO_SECUNDARIO(
-	id_efecto_secundario int primary key not null,
+	id_efecto_secundario int IDENTITY(1,1) primary key not null,
 	id_primera_cita int,
 	tiempo int,
 	efecto_secundario varchar (100)
 );
 
 CREATE TABLE SEGUNDA_CITA(
-	id_segunda_cita int primary key not null,
+	id_segunda_cita int IDENTITY(1,1) primary key not null,
 	fecha_hora datetime,
-	id_lugar_vacunacion_2 int,
-	id_primera_cita int,
-);
-
-CREATE TABLE LUGAR_VACUNACION_2(
-	id_lugar_vacunacion_2 int primary key not null,
-	lugar_vacunacion_2 varchar(50)
+	id_lugar_vacunacion int,
+	id_primera_cita int
 );
 
 ALTER TABLE REGISTRO
@@ -128,12 +120,8 @@ ADD CONSTRAINT FK_GESTION_CABINA
 FOREIGN KEY (id_cabina) REFERENCES CABINA (id_cabina);
 
 ALTER TABLE CIUDADANO
-ADD CONSTRAINT FK_CIUDADANO_CABINA
-FOREIGN KEY (id_cabina) REFERENCES CABINA (id_cabina);
-
-ALTER TABLE CIUDADANO
-ADD CONSTRAINT FK_CIUDADANO_AREA_ESPERA
-FOREIGN KEY (id_area_espera) REFERENCES AREA_ESPERA (id_area_espera);
+ADD CONSTRAINT FK_CIUDADANO_GESTOR
+FOREIGN KEY (id_gestor) REFERENCES GESTOR (id_gestor);
 
 ALTER TABLE CIUDADANO
 ADD CONSTRAINT FK_CIUDADANO_PRIMERA_CITA
@@ -148,8 +136,8 @@ ADD CONSTRAINT FK_EFECTO_SECUNDARIO_PRIMERA_CITA
 FOREIGN KEY (id_primera_cita) REFERENCES PRIMERA_CITA (id_primera_cita);
 
 ALTER TABLE SEGUNDA_CITA
-ADD CONSTRAINT FK_SEGUNDA_CITA_LUGAR_VACUNACION_2
-FOREIGN KEY (id_lugar_vacunacion_2) REFERENCES LUGAR_VACUNACION_2 (id_lugar_vacunacion_2);
+ADD CONSTRAINT FK_SEGUNDA_CITA_LUGAR_VACUNACION
+FOREIGN KEY (id_lugar_vacunacion) REFERENCES LUGAR_VACUNACION (id_lugar_vacunacion);
 
 ALTER TABLE SEGUNDA_CITA
 ADD CONSTRAINT FK_SEGUNDA_CITA_PRIMERA_CITA
@@ -184,11 +172,6 @@ INSERT INTO LUGAR_VACUNACION VALUES (025, 'los proceres');
 INSERT INTO LUGAR_VACUNACION VALUES (026, 'colonia satelite');
 INSERT INTO LUGAR_VACUNACION VALUES (027, 'centro de san salvador');
 
-INSERT INTO LUGAR_VACUNACION_2 VALUES (028, 'los heroes');
-INSERT INTO LUGAR_VACUNACION_2 VALUES (029, 'colonia medica');
-INSERT INTO LUGAR_VACUNACION_2 VALUES (030, 'los proceres');
-INSERT INTO LUGAR_VACUNACION_2 VALUES (031, 'colonia satelite');
-INSERT INTO LUGAR_VACUNACION_2 VALUES (032, 'centro de san salvador');
 
 
 
