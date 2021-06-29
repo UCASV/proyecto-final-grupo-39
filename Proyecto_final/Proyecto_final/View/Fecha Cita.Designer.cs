@@ -42,11 +42,12 @@ namespace Proyecto_final.View
             // 
             // lblfecha
             // 
-            this.lblfecha.Location = new System.Drawing.Point(63, 95);
+            this.lblfecha.Location = new System.Drawing.Point(63, 88);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(165, 38);
+            this.lblfecha.Size = new System.Drawing.Size(117, 38);
             this.lblfecha.TabIndex = 0;
-            this.lblfecha.Text = "fecha y hora";
+            this.lblfecha.Text = "Fecha y hora:";
+            this.lblfecha.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblVacunacion
             // 
@@ -54,11 +55,11 @@ namespace Proyecto_final.View
             this.lblVacunacion.Name = "lblVacunacion";
             this.lblVacunacion.Size = new System.Drawing.Size(165, 38);
             this.lblVacunacion.TabIndex = 2;
-            this.lblVacunacion.Text = " lugar de vacunacion";
+            this.lblVacunacion.Text = " Lugar de vacunacion:";
             // 
             // lblCitaRealizada
             // 
-            this.lblCitaRealizada.Location = new System.Drawing.Point(187, 23);
+            this.lblCitaRealizada.Location = new System.Drawing.Point(232, 23);
             this.lblCitaRealizada.Name = "lblCitaRealizada";
             this.lblCitaRealizada.Size = new System.Drawing.Size(165, 38);
             this.lblCitaRealizada.TabIndex = 5;
@@ -69,7 +70,7 @@ namespace Proyecto_final.View
             this.dtpCita.CustomFormat = "dd/MM/yyyy hh:mm tt";
             this.dtpCita.Enabled = false;
             this.dtpCita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCita.Location = new System.Drawing.Point(162, 89);
+            this.dtpCita.Location = new System.Drawing.Point(186, 95);
             this.dtpCita.Name = "dtpCita";
             this.dtpCita.Size = new System.Drawing.Size(227, 20);
             this.dtpCita.TabIndex = 6;
@@ -116,7 +117,7 @@ namespace Proyecto_final.View
             this.Controls.Add(this.lblVacunacion);
             this.Controls.Add(this.lblfecha);
             this.Name = "FechaCita";
-            this.Text = "Fecha_Cita";
+            this.Text = "Sistema de vacunacion";
             this.Load += new System.EventHandler(this.FechaCita_Load);
             this.ResumeLayout(false);
         }

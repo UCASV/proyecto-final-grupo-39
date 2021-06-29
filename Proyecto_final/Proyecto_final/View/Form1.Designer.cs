@@ -68,7 +68,7 @@
             this.lblDui.Name = "lblDui";
             this.lblDui.Size = new System.Drawing.Size(39, 36);
             this.lblDui.TabIndex = 1;
-            this.lblDui.Text = "DUI";
+            this.lblDui.Text = "DUI:";
             this.lblDui.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblNombre
@@ -77,16 +77,16 @@
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(50, 25);
             this.lblNombre.TabIndex = 2;
-            this.lblNombre.Text = "nombre:";
+            this.lblNombre.Text = "Nombre:";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblDomicilio
             // 
             this.lblDomicilio.Location = new System.Drawing.Point(27, 187);
             this.lblDomicilio.Name = "lblDomicilio";
-            this.lblDomicilio.Size = new System.Drawing.Size(112, 22);
+            this.lblDomicilio.Size = new System.Drawing.Size(120, 22);
             this.lblDomicilio.TabIndex = 3;
-            this.lblDomicilio.Text = "direccion de domicilio:";
+            this.lblDomicilio.Text = "Direccion de domicilio:";
             // 
             // lblTele
             // 
@@ -106,19 +106,19 @@
             // 
             // lblCronico
             // 
-            this.lblCronico.Location = new System.Drawing.Point(24, 304);
+            this.lblCronico.Location = new System.Drawing.Point(12, 304);
             this.lblCronico.Name = "lblCronico";
-            this.lblCronico.Size = new System.Drawing.Size(199, 45);
+            this.lblCronico.Size = new System.Drawing.Size(229, 45);
             this.lblCronico.TabIndex = 6;
-            this.lblCronico.Text = "mencione que enfermedades cronicas padece\r\n(si se llegara a poseer alguna ): ";
+            this.lblCronico.Text = "Mencione que enfermedades cronicas padece\r\n(si se llegara a poseer alguna ): ";
             // 
             // lblIdentificador
             // 
-            this.lblIdentificador.Location = new System.Drawing.Point(17, 374);
+            this.lblIdentificador.Location = new System.Drawing.Point(12, 357);
             this.lblIdentificador.Name = "lblIdentificador";
-            this.lblIdentificador.Size = new System.Drawing.Size(176, 34);
+            this.lblIdentificador.Size = new System.Drawing.Size(229, 34);
             this.lblIdentificador.TabIndex = 7;
-            this.lblIdentificador.Text = "Numero identificador(si pertenece a una intitucion esencial)";
+            this.lblIdentificador.Text = "Numero identificador (si pertenece a una intitucion esencial):";
             // 
             // txtNombre
             // 
@@ -150,7 +150,7 @@
             // 
             // rtbCronica
             // 
-            this.rtbCronica.Location = new System.Drawing.Point(219, 301);
+            this.rtbCronica.Location = new System.Drawing.Point(247, 297);
             this.rtbCronica.Name = "rtbCronica";
             this.rtbCronica.Size = new System.Drawing.Size(267, 52);
             this.rtbCronica.TabIndex = 11;
@@ -158,7 +158,7 @@
             // 
             // txtIdentificador
             // 
-            this.txtIdentificador.Location = new System.Drawing.Point(209, 371);
+            this.txtIdentificador.Location = new System.Drawing.Point(247, 371);
             this.txtIdentificador.Name = "txtIdentificador";
             this.txtIdentificador.Size = new System.Drawing.Size(289, 20);
             this.txtIdentificador.TabIndex = 12;
@@ -188,7 +188,7 @@
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(77, 36);
             this.lblYear.TabIndex = 15;
-            this.lblYear.Text = "Años de edad";
+            this.lblYear.Text = "Años de edad:";
             this.lblYear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnSeguimiento
@@ -197,7 +197,7 @@
             this.btnSeguimiento.Name = "btnSeguimiento";
             this.btnSeguimiento.Size = new System.Drawing.Size(147, 62);
             this.btnSeguimiento.TabIndex = 17;
-            this.btnSeguimiento.Text = "seguimiento de cita ";
+            this.btnSeguimiento.Text = "Seguimiento de cita ";
             this.btnSeguimiento.UseVisualStyleBackColor = true;
             this.btnSeguimiento.Click += new System.EventHandler(this.btnSeguimiento_Click);
             // 
@@ -243,6 +243,7 @@
             this.Controls.Add(this.lblProcesoC);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "Form1";
+            this.Text = "Sistema de vacunacion";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize) (this.nudEdad)).EndInit();
             this.ResumeLayout(false);

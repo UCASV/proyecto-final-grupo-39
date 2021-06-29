@@ -1,6 +1,10 @@
 using System;
 using System.Data;
+using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using Proyecto_final.Functions;
 
 namespace Proyecto_final.View
@@ -43,7 +47,30 @@ namespace Proyecto_final.View
 
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            // pdf
+            PdfPTable pdftable = new PdfPTable(2); 
+            PdfPCell header1 = new PdfPCell(new Phrase("Fecha"));
+            header1.BackgroundColor = new BaseColor(240, 240, 240);
+            pdftable.AddCell(header1);
+
+            PdfPCell header2 = new PdfPCell(new Phrase("Lugar"));
+            header2.BackgroundColor = new BaseColor(240, 240, 240);
+            pdftable.AddCell(header2);
+            DataRowView row = (DataRowView)cmbLugar.SelectedItem;
+            pdftable.AddCell(dtpCita.Value.ToString(CultureInfo.CurrentCulture));
+            pdftable.AddCell((string)row["lugar_vacunacion"]);
+            
+            using (FileStream stream = new FileStream("./Cita "+DUI+".pdf", FileMode.Create))
+            {
+                Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
+                PdfWriter.GetInstance(pdfDoc, stream);
+                pdfDoc.Open();
+                pdfDoc.Add(pdftable);
+                pdfDoc.Close();
+                stream.Close();
+                
+            }
+            MessageBox.Show("Se ha creado el pdf", "covid app",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
     class RandomDateTime

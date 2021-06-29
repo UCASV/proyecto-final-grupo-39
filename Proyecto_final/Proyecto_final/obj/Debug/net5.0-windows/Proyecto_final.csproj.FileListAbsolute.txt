@@ -64,3 +64,5 @@ C:\Users\USER\RiderProjects\Proyecto_final\Proyecto_final\obj\Debug\net5.0-windo
 C:\Users\USER\RiderProjects\Proyecto_final\Proyecto_final\obj\Debug\net5.0-windows\Proyecto_final.csproj.CopyComplete
 C:\Users\USER\RiderProjects\Proyecto_final\Proyecto_final\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\USER\RiderProjects\Proyecto_final\Proyecto_final\bin\Debug\net5.0-windows\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\USER\RiderProjects\Proyecto_final\Proyecto_final\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\USER\RiderProjects\Proyecto_final\Proyecto_final\bin\Debug\net5.0-windows\itextsharp.dll
